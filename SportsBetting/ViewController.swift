@@ -68,10 +68,11 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         println("Error: \(handleError.localizedDescription)")
     }
     
-    
-    
+    // Get List Of Friends
     
     //Add video files below
+    
+    
     
     
     
