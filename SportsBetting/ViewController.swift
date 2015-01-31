@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, FBLoginViewDelegate {
     
     @IBOutlet var fbLoginView : FBLoginView!
+    @IBOutlet var profilePictureView : FBProfilePictureView!
     
     //@IBOutlet var profilePictureView : FBProfilePictureView! - This is the IBOutlet for the picture view
     
