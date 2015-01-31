@@ -14,6 +14,7 @@
 		BF6F82E81A7C93E40079DAE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E61A7C93E40079DAE1 /* LaunchScreen.xib */; };
 		BF6F82F41A7C93E40079DAE1 /* SportsBettingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82F31A7C93E40079DAE1 /* SportsBettingTests.swift */; };
 		BF6F82FF1A7C94C10079DAE1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6F82FE1A7C94C10079DAE1 /* FacebookSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BFCD127B1A7D5A5500C15532 /* tumblr.gif in Resources */ = {isa = PBXBuildFile; fileRef = BFCD127A1A7D5A5500C15532 /* tumblr.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		BF6F82F31A7C93E40079DAE1 /* SportsBettingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsBettingTests.swift; sourceTree = "<group>"; };
 		BF6F82FD1A7C94090079DAE1 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		BF6F82FE1A7C94C10079DAE1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../SDKs/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		BFCD127A1A7D5A5500C15532 /* tumblr.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tumblr.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				BF6F82DA1A7C93E40079DAE1 /* SportsBetting */,
 				BF6F82F01A7C93E40079DAE1 /* SportsBettingTests */,
 				BF6F82D91A7C93E40079DAE1 /* Products */,
+				BFCD127A1A7D5A5500C15532 /* tumblr.gif */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFCD127B1A7D5A5500C15532 /* tumblr.gif in Resources */,
 				BF6F82E31A7C93E40079DAE1 /* Main.storyboard in Resources */,
 				BF6F82E81A7C93E40079DAE1 /* LaunchScreen.xib in Resources */,
 				BF6F82E51A7C93E40079DAE1 /* Images.xcassets in Resources */,
@@ -424,6 +428,7 @@
 				BF6F82F91A7C93E40079DAE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF6F82FA1A7C93E40079DAE1 /* Build configuration list for PBXNativeTarget "SportsBettingTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +437,7 @@
 				BF6F82FC1A7C93E40079DAE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
