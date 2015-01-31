@@ -17,7 +17,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.fbLoginView.delegate = self
-        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends", "user_photos"]
         
     }
     
@@ -34,7 +34,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         var userEmail = user.objectForKey("email") as String
         println("User Email: \(userEmail)")
         
-        // Get List Of Friends
+        // Get List Of Friends From FB
         var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
         friendsRequest.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
             var resultdict = result as NSDictionary
