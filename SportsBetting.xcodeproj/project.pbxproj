@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF6F82DE1A7C93E40079DAE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82DD1A7C93E40079DAE1 /* AppDelegate.swift */; };
+		BF6F82E01A7C93E40079DAE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82DF1A7C93E40079DAE1 /* ViewController.swift */; };
+		BF6F82E31A7C93E40079DAE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E11A7C93E40079DAE1 /* Main.storyboard */; };
+		BF6F82E51A7C93E40079DAE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E41A7C93E40079DAE1 /* Images.xcassets */; };
+		BF6F82E81A7C93E40079DAE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E61A7C93E40079DAE1 /* LaunchScreen.xib */; };
+		BF6F82F41A7C93E40079DAE1 /* SportsBettingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82F31A7C93E40079DAE1 /* SportsBettingTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF6F82EE1A7C93E40079DAE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF6F82D01A7C93E40079DAE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF6F82D71A7C93E40079DAE1;
+			remoteInfo = SportsBetting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF6F82D81A7C93E40079DAE1 /* SportsBetting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsBetting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF6F82DC1A7C93E40079DAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF6F82DD1A7C93E40079DAE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF6F82DF1A7C93E40079DAE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF6F82E21A7C93E40079DAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF6F82E41A7C93E40079DAE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF6F82E71A7C93E40079DAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BF6F82ED1A7C93E40079DAE1 /* SportsBettingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsBettingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF6F82F21A7C93E40079DAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF6F82F31A7C93E40079DAE1 /* SportsBettingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsBettingTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF6F82D51A7C93E40079DAE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF6F82EA1A7C93E40079DAE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF6F82CF1A7C93E40079DAE1 = {
+			isa = PBXGroup;
+			children = (
+				BF6F82DA1A7C93E40079DAE1 /* SportsBetting */,
+				BF6F82F01A7C93E40079DAE1 /* SportsBettingTests */,
+				BF6F82D91A7C93E40079DAE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF6F82D91A7C93E40079DAE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF6F82D81A7C93E40079DAE1 /* SportsBetting.app */,
+				BF6F82ED1A7C93E40079DAE1 /* SportsBettingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF6F82DA1A7C93E40079DAE1 /* SportsBetting */ = {
+			isa = PBXGroup;
+			children = (
+				BF6F82DD1A7C93E40079DAE1 /* AppDelegate.swift */,
+				BF6F82DF1A7C93E40079DAE1 /* ViewController.swift */,
+				BF6F82E11A7C93E40079DAE1 /* Main.storyboard */,
+				BF6F82E41A7C93E40079DAE1 /* Images.xcassets */,
+				BF6F82E61A7C93E40079DAE1 /* LaunchScreen.xib */,
+				BF6F82DB1A7C93E40079DAE1 /* Supporting Files */,
+			);
+			path = SportsBetting;
+			sourceTree = "<group>";
+		};
+		BF6F82DB1A7C93E40079DAE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF6F82DC1A7C93E40079DAE1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF6F82F01A7C93E40079DAE1 /* SportsBettingTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF6F82F31A7C93E40079DAE1 /* SportsBettingTests.swift */,
+				BF6F82F11A7C93E40079DAE1 /* Supporting Files */,
+			);
+			path = SportsBettingTests;
+			sourceTree = "<group>";
+		};
+		BF6F82F11A7C93E40079DAE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF6F82F21A7C93E40079DAE1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF6F82D71A7C93E40079DAE1 /* SportsBetting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF6F82F71A7C93E40079DAE1 /* Build configuration list for PBXNativeTarget "SportsBetting" */;
+			buildPhases = (
+				BF6F82D41A7C93E40079DAE1 /* Sources */,
+				BF6F82D51A7C93E40079DAE1 /* Frameworks */,
+				BF6F82D61A7C93E40079DAE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SportsBetting;
+			productName = SportsBetting;
+			productReference = BF6F82D81A7C93E40079DAE1 /* SportsBetting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF6F82EC1A7C93E40079DAE1 /* SportsBettingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF6F82FA1A7C93E40079DAE1 /* Build configuration list for PBXNativeTarget "SportsBettingTests" */;
+			buildPhases = (
+				BF6F82E91A7C93E40079DAE1 /* Sources */,
+				BF6F82EA1A7C93E40079DAE1 /* Frameworks */,
+				BF6F82EB1A7C93E40079DAE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF6F82EF1A7C93E40079DAE1 /* PBXTargetDependency */,
+			);
+			name = SportsBettingTests;
+			productName = SportsBettingTests;
+			productReference = BF6F82ED1A7C93E40079DAE1 /* SportsBettingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF6F82D01A7C93E40079DAE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Riley Hendrickson";
+				TargetAttributes = {
+					BF6F82D71A7C93E40079DAE1 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BF6F82EC1A7C93E40079DAE1 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BF6F82D71A7C93E40079DAE1;
+					};
+				};
+			};
+			buildConfigurationList = BF6F82D31A7C93E40079DAE1 /* Build configuration list for PBXProject "SportsBetting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF6F82CF1A7C93E40079DAE1;
+			productRefGroup = BF6F82D91A7C93E40079DAE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF6F82D71A7C93E40079DAE1 /* SportsBetting */,
+				BF6F82EC1A7C93E40079DAE1 /* SportsBettingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF6F82D61A7C93E40079DAE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF6F82E31A7C93E40079DAE1 /* Main.storyboard in Resources */,
+				BF6F82E81A7C93E40079DAE1 /* LaunchScreen.xib in Resources */,
+				BF6F82E51A7C93E40079DAE1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF6F82EB1A7C93E40079DAE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF6F82D41A7C93E40079DAE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF6F82E01A7C93E40079DAE1 /* ViewController.swift in Sources */,
+				BF6F82DE1A7C93E40079DAE1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF6F82E91A7C93E40079DAE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF6F82F41A7C93E40079DAE1 /* SportsBettingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF6F82EF1A7C93E40079DAE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF6F82D71A7C93E40079DAE1 /* SportsBetting */;
+			targetProxy = BF6F82EE1A7C93E40079DAE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF6F82E11A7C93E40079DAE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF6F82E21A7C93E40079DAE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF6F82E61A7C93E40079DAE1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF6F82E71A7C93E40079DAE1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF6F82F51A7C93E40079DAE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF6F82F61A7C93E40079DAE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF6F82F81A7C93E40079DAE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SportsBetting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF6F82F91A7C93E40079DAE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SportsBetting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BF6F82FB1A7C93E40079DAE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SportsBettingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportsBetting.app/SportsBetting";
+			};
+			name = Debug;
+		};
+		BF6F82FC1A7C93E40079DAE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SportsBettingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportsBetting.app/SportsBetting";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF6F82D31A7C93E40079DAE1 /* Build configuration list for PBXProject "SportsBetting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF6F82F51A7C93E40079DAE1 /* Debug */,
+				BF6F82F61A7C93E40079DAE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF6F82F71A7C93E40079DAE1 /* Build configuration list for PBXNativeTarget "SportsBetting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF6F82F81A7C93E40079DAE1 /* Debug */,
+				BF6F82F91A7C93E40079DAE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF6F82FA1A7C93E40079DAE1 /* Build configuration list for PBXNativeTarget "SportsBettingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF6F82FB1A7C93E40079DAE1 /* Debug */,
+				BF6F82FC1A7C93E40079DAE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF6F82D01A7C93E40079DAE1 /* Project object */;
+}
