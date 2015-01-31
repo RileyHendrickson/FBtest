@@ -13,6 +13,7 @@
 		BF6F82E51A7C93E40079DAE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E41A7C93E40079DAE1 /* Images.xcassets */; };
 		BF6F82E81A7C93E40079DAE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E61A7C93E40079DAE1 /* LaunchScreen.xib */; };
 		BF6F82F41A7C93E40079DAE1 /* SportsBettingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82F31A7C93E40079DAE1 /* SportsBettingTests.swift */; };
+		BF6F82FF1A7C94C10079DAE1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6F82FE1A7C94C10079DAE1 /* FacebookSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		BF6F82ED1A7C93E40079DAE1 /* SportsBettingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsBettingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6F82F21A7C93E40079DAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF6F82F31A7C93E40079DAE1 /* SportsBettingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsBettingTests.swift; sourceTree = "<group>"; };
+		BF6F82FD1A7C94090079DAE1 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
+		BF6F82FE1A7C94C10079DAE1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../SDKs/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6F82FF1A7C94C10079DAE1 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 		BF6F82CF1A7C93E40079DAE1 = {
 			isa = PBXGroup;
 			children = (
+				BF6F82FE1A7C94C10079DAE1 /* FacebookSDK.framework */,
 				BF6F82DA1A7C93E40079DAE1 /* SportsBetting */,
 				BF6F82F01A7C93E40079DAE1 /* SportsBettingTests */,
 				BF6F82D91A7C93E40079DAE1 /* Products */,
@@ -79,6 +84,7 @@
 			children = (
 				BF6F82DD1A7C93E40079DAE1 /* AppDelegate.swift */,
 				BF6F82DF1A7C93E40079DAE1 /* ViewController.swift */,
+				BF6F82FD1A7C94090079DAE1 /* Bridge-Header.h */,
 				BF6F82E11A7C93E40079DAE1 /* Main.storyboard */,
 				BF6F82E41A7C93E40079DAE1 /* Images.xcassets */,
 				BF6F82E61A7C93E40079DAE1 /* LaunchScreen.xib */,
@@ -161,6 +167,7 @@
 				TargetAttributes = {
 					BF6F82D71A7C93E40079DAE1 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 32W84ZFKVR;
 					};
 					BF6F82EC1A7C93E40079DAE1 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -336,9 +343,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Riley/Desktop/SDKs/FacebookSDK,
+				);
 				INFOPLIST_FILE = SportsBetting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SportsBetting/Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -346,9 +359,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Riley/Desktop/SDKs/FacebookSDK,
+				);
 				INFOPLIST_FILE = SportsBetting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SportsBetting/Bridge-Header.h";
 			};
 			name = Release;
 		};
