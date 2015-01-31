@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B8380FEA1A7CA73A0016ADC7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8380FE91A7CA73A0016ADC7 /* FacebookSDK.framework */; };
 		BF6F82DE1A7C93E40079DAE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82DD1A7C93E40079DAE1 /* AppDelegate.swift */; };
 		BF6F82E01A7C93E40079DAE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82DF1A7C93E40079DAE1 /* ViewController.swift */; };
 		BF6F82E31A7C93E40079DAE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E11A7C93E40079DAE1 /* Main.storyboard */; };
 		BF6F82E51A7C93E40079DAE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E41A7C93E40079DAE1 /* Images.xcassets */; };
 		BF6F82E81A7C93E40079DAE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E61A7C93E40079DAE1 /* LaunchScreen.xib */; };
 		BF6F82F41A7C93E40079DAE1 /* SportsBettingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82F31A7C93E40079DAE1 /* SportsBettingTests.swift */; };
-		BF6F82FF1A7C94C10079DAE1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6F82FE1A7C94C10079DAE1 /* FacebookSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		BFCD127B1A7D5A5500C15532 /* tumblr.gif in Resources */ = {isa = PBXBuildFile; fileRef = BFCD127A1A7D5A5500C15532 /* tumblr.gif */; };
+		BFCD127D1A7D5B5E00C15532 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCD127C1A7D5B5E00C15532 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B8380FE91A7CA73A0016ADC7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		BF6F82D81A7C93E40079DAE1 /* SportsBetting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsBetting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6F82DC1A7C93E40079DAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF6F82DD1A7C93E40079DAE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,8 +39,8 @@
 		BF6F82F21A7C93E40079DAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF6F82F31A7C93E40079DAE1 /* SportsBettingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsBettingTests.swift; sourceTree = "<group>"; };
 		BF6F82FD1A7C94090079DAE1 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
-		BF6F82FE1A7C94C10079DAE1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../SDKs/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		BFCD127A1A7D5A5500C15532 /* tumblr.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tumblr.gif; sourceTree = "<group>"; };
+		BFCD127C1A7D5B5E00C15532 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8380FEA1A7CA73A0016ADC7 /* FacebookSDK.framework in Frameworks */,
+				BFCD127D1A7D5B5E00C15532 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +65,7 @@
 		BF6F82CF1A7C93E40079DAE1 = {
 			isa = PBXGroup;
 			children = (
-				B8380FE91A7CA73A0016ADC7 /* FacebookSDK.framework */,
+				BFCD127C1A7D5B5E00C15532 /* FacebookSDK.framework */,
 				BF6F82DA1A7C93E40079DAE1 /* SportsBetting */,
 				BF6F82F01A7C93E40079DAE1 /* SportsBettingTests */,
 				BF6F82D91A7C93E40079DAE1 /* Products */,
@@ -354,6 +352,7 @@
 					"$(inherited)",
 					/Users/Riley/Desktop/SDKs/FacebookSDK,
 					/Users/BradBernard/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SportsBetting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -371,6 +370,7 @@
 					"$(inherited)",
 					/Users/Riley/Desktop/SDKs/FacebookSDK,
 					/Users/BradBernard/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SportsBetting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

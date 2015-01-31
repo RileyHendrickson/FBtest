@@ -13,9 +13,6 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     @IBOutlet var fbLoginView : FBLoginView!
     @IBOutlet var profilePictureView : FBProfilePictureView!
     
-    //@IBOutlet var profilePictureView : FBProfilePictureView! - This is the IBOutlet for the picture view
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,7 +23,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         
         
         //Added video file for launch screen background
-        var filePath = NSBundle.mainBundle().pathForResource("tumblr", ofType: "gif")
+        var filePath = NSBundle.mainBundle().pathForResource("tumblr", ofType: "gif")               // WIll be a .MP4 file rather then a gif, placeholder for now
         var gif = NSData(contentsOfFile: filePath!)
         
         var webViewBG = UIWebView(frame: self.view.frame)
@@ -41,11 +38,15 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         self.view.addSubview(filter)
         
         var welcomeLabel = UILabel(frame: CGRectMake(0, 100, self.view.bounds.size.width, 100))
-        welcomeLabel.text = "WELCOME"
+        welcomeLabel.text = "WELCOME"                                   // This code will be changed to a image instead of text
         welcomeLabel.textColor = UIColor.whiteColor()
         welcomeLabel.font = UIFont.systemFontOfSize(50)
         welcomeLabel.textAlignment = NSTextAlignment.Center
         self.view.addSubview(welcomeLabel)
+        
+        
+        
+        //Below is the code if we want to use their login/sign up buttons - uncomment to see what it looks like
         
         //var loginBtn = UIButton(frame: CGRectMake(40, 360, 240, 40))
         //loginBtn.layer.borderColor = UIColor.whiteColor().CGColor
@@ -88,11 +89,11 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         friendsRequest.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
             var resultdict = result as NSDictionary
             
-            
-            //self.profilePictureView.profileID = user.objectID                                           Grabbing the photo from the FB profile
-            //self.profilePictureView.pictureCropping = FBProfilePictureCropping.Square                   Setting the photo to a square
-            //self.profilePictureView.frame = CGRectMake(200, 200, 100, 100)                              Setting the Photo frame
-            //self.profilePictureView.layer.cornerRadius = self.profilePictureView.frame.size.width / 2   Setting the photo size
+            //Pull in the facebook profile picture code
+            self.profilePictureView.profileID = user.objectID
+            self.profilePictureView.pictureCropping = FBProfilePictureCropping.Square
+            self.profilePictureView.frame = CGRectMake(200, 200, 100, 100)
+            self.profilePictureView.layer.cornerRadius = self.profilePictureView.frame.size.width / 2
             
             
             
@@ -109,13 +110,10 @@ class ViewController: UIViewController, FBLoginViewDelegate {
             var friends = resultdict.objectForKey("data") as NSArray
             println("Found \(friends.count) friends")
             
-           
-            
         }
         
             //Added a view for
-            //self.view.addSubview(profilePictureView)
-        
+            self.view.addSubview(profilePictureView)
         
     }
     
@@ -127,17 +125,13 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         println("Error: \(handleError.localizedDescription)")
     }
     
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-    
     
 }
