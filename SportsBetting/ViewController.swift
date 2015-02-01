@@ -22,28 +22,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         
         
         
-        //Added video file for launch screen background
-        var filePath = NSBundle.mainBundle().pathForResource("tumblr", ofType: "gif")               // WIll be a .MP4 file rather then a gif, placeholder for now
-        var gif = NSData(contentsOfFile: filePath!)
-        
-        var webViewBG = UIWebView(frame: self.view.frame)
-        webViewBG.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
-        webViewBG.userInteractionEnabled = false;
-        self.view.addSubview(webViewBG)
-        
-        var filter = UIView()
-        filter.frame = self.view.frame
-        filter.backgroundColor = UIColor.blackColor()
-        filter.alpha = 0.05
-        self.view.addSubview(filter)
-        
-        var welcomeLabel = UILabel(frame: CGRectMake(0, 100, self.view.bounds.size.width, 100))
-        welcomeLabel.text = "WELCOME"                                   // This code will be changed to a image instead of text
-        welcomeLabel.textColor = UIColor.whiteColor()
-        welcomeLabel.font = UIFont.systemFontOfSize(50)
-        welcomeLabel.textAlignment = NSTextAlignment.Center
-        self.view.addSubview(welcomeLabel)
-        
+                
         
         
         //Below is the code if we want to use their login/sign up buttons - uncomment to see what it looks like
@@ -61,7 +40,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         //signUpBtn.layer.borderWidth = 2
         //signUpBtn.titleLabel!.font = UIFont.systemFontOfSize(24)
         //signUpBtn.tintColor = UIColor.whiteColor()
-        //signUpBtn.setTitle("Sign Up", forState: UIControlState.Normal)  -   [Need to replace with the FB login button]
+        //signUpBtn.setTitle("Sign Up", forState: UIControlState.Normal)
         //self.view.addSubview(signUpBtn)
         
         
@@ -90,10 +69,10 @@ class ViewController: UIViewController, FBLoginViewDelegate {
             var resultdict = result as NSDictionary
             
             //Pull in the facebook profile picture code
-            self.profilePictureView.profileID = user.objectID
-            self.profilePictureView.pictureCropping = FBProfilePictureCropping.Square
-            self.profilePictureView.frame = CGRectMake(200, 200, 100, 100)
-            self.profilePictureView.layer.cornerRadius = self.profilePictureView.frame.size.width / 2
+            //self.profilePictureView.profileID = user.objectID
+            //self.profilePictureView.pictureCropping = FBProfilePictureCropping.Square
+            //self.profilePictureView.frame = CGRectMake(200, 200, 100, 100)
+            //self.profilePictureView.layer.cornerRadius = self.profilePictureView.frame.size.width / 2
             
             
             
@@ -113,7 +92,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         }
         
             //Added a view for
-            self.view.addSubview(profilePictureView)
+            //self.view.addSubview(profilePictureView)
         
     }
     
