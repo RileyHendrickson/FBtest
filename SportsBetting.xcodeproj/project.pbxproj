@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B8380FEA1A7CA73A0016ADC7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8380FE91A7CA73A0016ADC7 /* FacebookSDK.framework */; };
+		B8506A2C1A7E06E3006C8E89 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8506A231A7E0680006C8E89 /* CryptoSwift.framework */; };
 		BF6F82DE1A7C93E40079DAE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82DD1A7C93E40079DAE1 /* AppDelegate.swift */; };
 		BF6F82E01A7C93E40079DAE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F82DF1A7C93E40079DAE1 /* ViewController.swift */; };
 		BF6F82E31A7C93E40079DAE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6F82E11A7C93E40079DAE1 /* Main.storyboard */; };
@@ -17,6 +18,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B8506A221A7E0680006C8E89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8506A1D1A7E0680006C8E89 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
+		B8506A241A7E0680006C8E89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8506A1D1A7E0680006C8E89 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = CryptoSwiftTests;
+		};
 		BF6F82EE1A7C93E40079DAE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF6F82D01A7C93E40079DAE1 /* Project object */;
@@ -28,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		B8380FE91A7CA73A0016ADC7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		B8506A1D1A7E0680006C8E89 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = CryptoSwift/CryptoSwift.xcodeproj; sourceTree = "<group>"; };
 		BF6F82D81A7C93E40079DAE1 /* SportsBetting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsBetting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6F82DC1A7C93E40079DAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF6F82DD1A7C93E40079DAE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8506A2C1A7E06E3006C8E89 /* CryptoSwift.framework in Frameworks */,
 				B8380FEA1A7CA73A0016ADC7 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8506A1E1A7E0680006C8E89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8506A231A7E0680006C8E89 /* CryptoSwift.framework */,
+				B8506A251A7E0680006C8E89 /* CryptoSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BF6F82CF1A7C93E40079DAE1 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +93,7 @@
 				BF6F82DA1A7C93E40079DAE1 /* SportsBetting */,
 				BF6F82F01A7C93E40079DAE1 /* SportsBettingTests */,
 				BF6F82D91A7C93E40079DAE1 /* Products */,
+				B8506A1D1A7E0680006C8E89 /* CryptoSwift.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +213,12 @@
 			mainGroup = BF6F82CF1A7C93E40079DAE1;
 			productRefGroup = BF6F82D91A7C93E40079DAE1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B8506A1E1A7E0680006C8E89 /* Products */;
+					ProjectRef = B8506A1D1A7E0680006C8E89 /* CryptoSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BF6F82D71A7C93E40079DAE1 /* SportsBetting */,
@@ -193,6 +226,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B8506A231A7E0680006C8E89 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = B8506A221A7E0680006C8E89 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8506A251A7E0680006C8E89 /* CryptoSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CryptoSwiftTests.xctest;
+			remoteRef = B8506A241A7E0680006C8E89 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BF6F82D61A7C93E40079DAE1 /* Resources */ = {
