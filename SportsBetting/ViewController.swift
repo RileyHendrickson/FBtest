@@ -9,6 +9,7 @@
 import UIKit
 import CryptoSwift
 import Foundation
+//import CommonCrypto
 
 class ViewController: UIViewController, FBLoginViewDelegate {
     
@@ -31,62 +32,45 @@ class ViewController: UIViewController, FBLoginViewDelegate {
             interfaceName = "iPhone"
         }
         
-        var device = UIDevice.currentDevice()
+        //var device = UIDevice.currentDevice()
         //println(device.name, device.systemName, device.systemVersion, device.model, device.localizedModel,device.identifierForVendor.UUIDString)
         //println(interfaceName)
         
-        var strTest = String("data")
-        var keyStr = String("abcdefghijklmnop")
-        //var byteArray = [Byte]()
-        //byteArray = [UInt8](keyStr)
+        var strTest = "data testing"
+        var keyStr = "4sZHK5oYi4CVRAx7"
+        var encryptedStr = "o+U3+wESWmhD01W5Oz48vy+bK6vpdk7Z854CAGeYtJEGD+TC+Ke2djUYa7adDqgdz5Db/eNvEgfL1PiUazV7vnJvB7vmCsu6I2fKCypkClczKTERc0I/Fa6+Z/ikEFOoXYbw/KnGo1qnkd9PZykMIg6bhlBLv6Vv5ozLHcOeZIRZZhUPM37Mpitjg884LmuXXR16YtYH5IDLzzo6EZox228hIXDFgeIReniJTaxm0Ek="
         
-        //if let hash = strTest.sha256() {
-        //    println(hash)
-        //}
-        
-        // 1. Add padding (Optional)
-        let plaintextData = PKCS7(data: strTest.dataUsingEncoding(NSUTF8StringEncoding)!).addPadding(AES.blockSizeBytes())
-        
-        // 2. Encrypt with key and random IV
-        //let keyData = NSData.withBytes([0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00])
-        let keyData = NSData.withBytes([UInt8](keyStr.utf8))
-        //println([UInt8](keyStr.utf8))
+        let keyData = keyStr.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
         let ivData:NSData = Cipher.randomIV(keyData)
         
-        let encryptedData = Cipher.AES(key: keyData, iv: ivData, blockMode: .CBC).encrypt(plaintextData)
-        if let actualData = encryptedData {
-            
+        let encrypted = encrypt(strTest.dataUsingEncoding(NSUTF8StringEncoding)!, keyData: keyData)
+        let decrypted = decrypt(encrypted, keyData: keyData)
+        let base64String = encrypted.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+        println(base64String)
         
+        var encryptedStrData = NSData(base64EncodedString: encryptedStr, options: NSDataBase64DecodingOptions.allZeros)!
+        let decryptedTryData = decrypt(encryptedStrData, keyData: keyData)
+        let plaintext = NSString(CString: decryptedTryData, encoding: NSUTF8StringEncoding)!
+        println(plaintext)
         
-        // or
+    }
+    
+    func decrypt(transferData:NSData, keyData:NSData) -> String {
+        let ivData = transferData.subdataWithRange(NSRange(location: 0, length: AES.blockSizeBytes()))
+        let encryptedData = transferData.subdataWithRange(NSRange(location: AES.blockSizeBytes(), length: transferData.length - AES.blockSizeBytes()))
+        
         let aes = AES(key: keyData, iv: ivData, blockMode: .CBC) // CBC is default
-        //let encryptedData = aes?.encrypt(plaintextData, addPadding: true) // With padding enabled
-        
-        // 3. decrypt with key and IV
-        let decryptedData = Cipher.AES(key: keyData, iv: ivData, blockMode: .CBC).decrypt(encryptedData!)
-        
-        let plainttextData = PKCS7(data: decryptedData!).removePadding()
-        var error: NSError?
-        let encryptString = NSString(data: encryptedData!, encoding: NSUTF8StringEncoding)
-        let resstr = NSString(data: plainttextData, encoding: NSUTF8StringEncoding)
-        let encryptKey = NSString(data: keyData, encoding: NSUTF8StringEncoding)
-        //println(encryptedData, encryptString, resstr, encryptKey)
-        //println(encryptedData?.hexString)
-        
-            var bData = encryptedData?.base64EncodedDataWithOptions(NSDataBase64EncodingOptions.allZeros)
-            //var b64Data = NSData(base64EncodedData: encryptedData!, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
-        //println(NSString(data: bData!, encoding: NSUTF8StringEncoding)
-            let base64String = actualData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithCarriageReturn)
-            println(base64String)
-
-        //let base64Encoded = utf8str.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.fromRaw(0)!)
-
-        //println(encryptString)
-        //println(actualData.description, actualData.hexString, actualData)
-        
-        }
-        
-        
+        let decryptedData = Cipher.AES(key: keyData, iv: ivData, blockMode: .CBC).decrypt(encryptedData)
+        let decryptedString = NSString(data: decryptedData!, encoding: NSUTF8StringEncoding)!
+        return decryptedString
+    }
+    
+    func encrypt(plaintextData:NSData, keyData:NSData) -> NSData {
+        let ivData:NSData = Cipher.randomIV(keyData)
+        let cipherdata = Cipher.AES(key: keyData, iv: ivData, blockMode: .CBC).encrypt(plaintextData)
+        let transferData = NSMutableData(data: ivData)
+        transferData.appendData(cipherdata!)
+        return transferData
     }
     
     // Facebook Delegate Methods
@@ -96,7 +80,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
-        println("User: \(user)")
+        //println("User: \(user)")
         
         //user.keyEnumerator()
         
