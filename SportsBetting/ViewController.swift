@@ -32,13 +32,19 @@ class ViewController: UIViewController, FBLoginViewDelegate {
             interfaceName = "iPhone"
         }
         
-        //var device = UIDevice.currentDevice()
+        var device = UIDevice.currentDevice()
         //println(device.name, device.systemName, device.systemVersion, device.model, device.localizedModel,device.identifierForVendor.UUIDString)
         //println(interfaceName)
         
-        var strTest = "data testing"
+        
+        
+        //var strTest = "data testing"
+        let date = NSDate()
+        let timestamp = date.timeIntervalSince1970
+        //var strTest = "$2y$10$uID4XnCset1vkxN.1W0w.OH27Et8/aj.2wgIHPtJq0dEKb/73X0pa|\(timestamp)|\(device.identifierForVendor.UUIDString)"
+        var strTest = "$2y$10$uID4XnCset1vkxN.1W0w.OH27Et8/aj.2wgIHPtJq0dEKb/73X0pa"
         var keyStr = "4sZHK5oYi4CVRAx7"
-        var encryptedStr = "o+U3+wESWmhD01W5Oz48vy+bK6vpdk7Z854CAGeYtJEGD+TC+Ke2djUYa7adDqgdz5Db/eNvEgfL1PiUazV7vnJvB7vmCsu6I2fKCypkClczKTERc0I/Fa6+Z/ikEFOoXYbw/KnGo1qnkd9PZykMIg6bhlBLv6Vv5ozLHcOeZIRZZhUPM37Mpitjg884LmuXXR16YtYH5IDLzzo6EZox228hIXDFgeIReniJTaxm0Ek="
+        var encryptedStr = "z7uYRApLbx7FrR4ZdSYq8n94w6dEUHkKtABWOyBXWmhJyoVLSI70TQCsGiXnVxjt8LNMsDQH/4N2aSVceiZCX//T3EaxalJyHr6j6b/C+oLQIOMUFQRP9Plocaprj+j8Ml8FbMgkOvSQkypc2fTaVJErohE0a1iEPQPfL+Rlxr/D1Hm3spPixy3/T1rsYmgDIWpYfm8zdLPgufXdOtgoYl7K29NXkQvrA+A5cYzt/ppHULToBXqr29nBQtjKhpxeSih2hDO+RCxcc33drimZd+SQE2Pk3iYCuKQIIw2xsa9/uXhrEZLVVFAW4XjEDr4EG0DSmCQbePE5uM58AUBfSDAAkpk8YK3GAXXSp22qx1DdAztCMVw82ad1hW7e9EhF5cxhyMdVczE1BeOireTnCgqsgDzkq0qJ5c9F4MVKLBFm9L7FHeIlGSctAdurUtqVp63VfpEDfAzng1oIEBFAeQKvIsjpDtlI/nUsVgvIsD4DOqg7htKFdsa8tHG8tduqkFWJizicRBQ5BmFWacxEcvUDAEDFATaQHAtFg0N+KTeKXI/Gg8svBNUUdlZRfR6QrPhlLrN0Ys91kjFWn5m6U0AzyBT2KeyZgGZNWcnGjgOqrFxetIMkvypIcUUJdu/HTEPjTz8ghH28/8PnErcptEPVmw3Fi+RGOnXYN/XzscDosrK/8k9ec4P6PgYnA7EIgbDbnhCoAE9XEb9OIzxpnR8+eNZ0TFA2e9JkEymJnGusyP8zlwxq6BimW4A6ctyCOJ14B7OkoOAGueDXaoCAeTj913g73f+Nz1zTIP1AdRzOadoOMebuEU4aRAA8tDowNTiYsm74pN/Zci1jo8acQva8gcGg1K53SmX4oOphIc9fsNuqJuxpV42bgmfqkq07IpZeT7IfTPlQpIDjBLRXXaW29jm/Kw6xy0+ecNM8nOIjYp1baVtIp+HRBpP4GV93tauPmbw8Vw8ccQrVYowusrDBAwDxmy1Eedu1PK2pw0acwn1nCCEWKPX5MVO1eAh17IojBT0D7YgHRzrHdrP5xv5fPUeyhSFniTNkYENogjRU6Mba7M2LElwDtQL9oCBcZBStX5v4k4YdpbyKMZuylg=="
         
         let keyData = keyStr.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
         let ivData:NSData = Cipher.randomIV(keyData)
@@ -134,4 +140,42 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func sendRequest() {
+        /* Configure session, choose between:
+        * defaultSessionConfiguration
+        * ephemeralSessionConfiguration
+        * backgroundSessionConfigurationWithIdentifier:
+        And set session-wide properties, such as: HTTPAdditionalHeaders,
+        HTTPCookieAcceptPolicy, requestCachePolicy or timeoutIntervalForRequest.
+        */
+        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        
+        /* Create session, and optionally set a NSURLSessionDelegate. */
+        let session = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+        
+        /* Create the Request:
+        Encrypt (GET http://sportsapi.app/encrypt)
+        */
+        
+        var URL = NSURL(string: "http://sportsapi.app/encrypt")
+        let request = NSMutableURLRequest(URL: URL!)
+        request.HTTPMethod = "GET"
+        
+        /* Start a new Task */
+        let task = session.dataTaskWithRequest(request, completionHandler: { (data : NSData!, response : NSURLResponse!, error : NSError!) -> Void in
+            if (error == nil) {
+                // Success
+                let statusCode = (response as NSHTTPURLResponse).statusCode
+                println("URL Session Task Succeeded: HTTP \(statusCode)")
+            }
+            else {
+                // Failure
+                println("URL Session Task Failed: %@", error.localizedDescription);
+            }
+        })
+        task.resume()
+    }
+    
 }
+    
+

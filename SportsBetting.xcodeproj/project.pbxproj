@@ -194,10 +194,11 @@
 				TargetAttributes = {
 					BF6F82D71A7C93E40079DAE1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 32W84ZFKVR;
+						DevelopmentTeam = RMJV5R42F5;
 					};
 					BF6F82EC1A7C93E40079DAE1 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = RMJV5R42F5;
 						TestTargetID = BF6F82D71A7C93E40079DAE1;
 					};
 				};
